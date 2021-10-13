@@ -2,9 +2,6 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import s from './ContactForm.module.css';
-// import shortid from 'shortid';
-
-console.log(s);
 
 class ContactForm extends Component {
   state = {
@@ -84,4 +81,5 @@ ContactForm.propTypes = {
   number: PropTypes.number,
   onSubmit: PropTypes.func.isRequired,
 };
+
 export default ContactForm;

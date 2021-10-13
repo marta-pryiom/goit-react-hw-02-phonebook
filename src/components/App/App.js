@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import ContactForm from '../components/ContactForm';
-import ContactList from '../components/ContactList';
-import Filter from '../components/Filter';
+import ContactForm from '../ContactForm';
+import ContactList from '../ContactList';
+import Filter from '../Filter';
 import './App.css';
 
 class App extends Component {
@@ -18,8 +18,8 @@ class App extends Component {
 
   addContacts = info => {
     const searchSameName = this.state.contacts
-      .map(el => el.name)
-      .includes(info.name);
+      .map(el => el.name.toLowerCase())
+      .includes(info.name.toLowerCase());
 
     if (searchSameName) {
       alert(`${info.name} is already in contacts`);
